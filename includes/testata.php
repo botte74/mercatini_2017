@@ -65,52 +65,6 @@
 					}
 				}
 
-				/** Se sono sulla stessa pagina non vedo il pulsante */
-				if ((basename($_SERVER["PHP_SELF"]) != "abbina.php")) {
-					/** Visualizza abbinamenti tavoli solo se admin, abbina o distribuzione */
-					if ($_SESSION['tipo'] == 'admin' || $_SESSION['tipo'] == 'abbina' || $_SESSION['tipo'] == 'distribuzione') {
-						?>
-						<li>
-							<a class="btn btn-success btn-lg" href="abbina.php">
-								<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-								Abbinamenti
-							</a>
-						</li>
-						<?php
-					}
-				}
-
-				/** Se sono sulla stessa pagina non vedo il pulsante */
-				if ((basename($_SERVER["PHP_SELF"]) != "distribuzione.php")) {
-					/** Visualizza distribuzione solo se admin o distribuzione */
-					if ($_SESSION['tipo'] == 'admin' || $_SESSION['tipo'] == 'distribuzione') {
-						?>
-						<li>
-							<a class="btn btn-success btn-lg" href="distribuzione.php">
-								<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-								Distribuzione
-							</a>
-						</li>
-						<?php
-					}
-				}
-
-				/** Se sono sulla stessa pagina non vedo il pulsante */
-				if ((basename($_SERVER["PHP_SELF"]) != "griglie.php")) {
-					/** Visualizza grigle solo se admin, distribuzione o griglie */
-					if ($_SESSION['tipo'] == 'admin' || $_SESSION['tipo'] == 'distribuzione' || $_SESSION['tipo'] == 'griglie') {
-						?>
-						<li>
-							<a class="btn btn-success btn-lg" href="griglie.php">
-								<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-								Griglie
-							</a>
-						</li>
-						<?php
-					}
-				}
-
-
 				/** Pulsante Home solo se su pagina diversa da index.php */
 				if ((basename($_SERVER["PHP_SELF"]) != "index.php")) {
 					?>

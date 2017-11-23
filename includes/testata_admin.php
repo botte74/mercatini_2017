@@ -111,36 +111,6 @@
 				}
 
 				/** Se sono sulla stessa pagina non vedo il pulsante */
-				if ((basename($_SERVER["PHP_SELF"]) != "stampa_server.php")) {
-					/** Pagina per ciclo stampa solo se admin */
-					if ($_SESSION['tipo'] == 'admin') {
-						?>
-						<li>
-							<a class="btn btn-success btn-lg" href="stampa_distribuzione_sagra.php" target="_blank">
-								<span class="glyphicon glyphicon-print" aria-hidden="true"></span>
-								Stampe
-							</a>
-						</li>
-						<?php
-					}
-				}
-
-				/** Se sono sulla stessa pagina non vedo il pulsante */
-				if ((basename($_SERVER["PHP_SELF"]) != "tempi.php")) {
-					/** Visualizza gestione tempi solo se admin */
-					if ($_SESSION['tipo'] == 'admin') {
-						?>
-						<li>
-							<a class="btn btn-success btn-lg" href="tempi.php">
-								<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-								Tempi
-							</a>
-						</li>
-						<?php
-					}
-				}
-
-				/** Se sono sulla stessa pagina non vedo il pulsante */
 				if ((basename($_SERVER["PHP_SELF"]) != "gruppi.php")) {
 					/** Visualizza gestione tempi solo se admin */
 					if ($_SESSION['tipo'] == 'admin') {

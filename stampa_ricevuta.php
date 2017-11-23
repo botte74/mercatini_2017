@@ -168,6 +168,7 @@
 	stampa_coda();
 
 	$pdf->Output("./stampe/" . $cartella . "/" . $ordine . ".pdf", "F");
+	$pdf->Output("./stampe/" . $cartella . "/" . $ordine . "_2.pdf", "F");
 	$pdf->Output();
 
 	//----------------------------------------------------------------
@@ -273,24 +274,6 @@
 		$pdf->Cell(40, 10, "TOTALE", "TB", 0);
 		$pdf->Cell(20,10, EURO . " " . $totale_ordine, "TB", 1, "R");
 
-		// se è un ordine al tavolo metto scritta informativa
-		if ($tipo == "T") {
-			$pdf->SetFont('Arial','B',10);
-			$pdf->Cell(70, 5, "", 0, 1, "C");
-			$pdf->Cell(70, 5, "Sedetevi al tavolo e chiamate un cameriere", 0, 1, "C");
-			$pdf->Cell(70, 5, "con la maglietta ARANCIONE", 0, 1, "C");
-			$pdf->Cell(70, 5, "per essere serviti", 0, 1, "C");
-			$pdf->Cell(70, 10, "Buon Appetito!!!", "B", 1, "C");
-		}
-
-		// se è un ordine al tavolo metto scritta informativa
-		if ($tipo == "A") {
-			$pdf->SetFont('Arial','B',10);
-			$pdf->Cell(70, 5, "", 0, 1, "C");
-			$pdf->Cell(70, 5, "Recatevi al banco distribuzione per la", 0, 1, "C");
-			$pdf->Cell(70, 5, "consegna dell'ordine", 0, 1, "C");
-			$pdf->Cell(70, 10, "Buon Appetito!!!", "B", 1, "C");
-		}
 	}
 
 function stampa_buono_testa() {
@@ -372,20 +355,5 @@ function stampa_buono_fine() {
 }
 
 function stampa_coda() {
-	global $pdf, $totaleordine, $row, $altriga, $nome, $ordine;
-	$pdf->AddFont('Asfont','','asfont.php');
-	$pdf->Image(__DIR__.'/fpdf181/asbanner.png',0,null,80,0,'PNG');
-	/*$pdf->SetFont('Asfont','',8);
-	$pdf->Cell(70,2," ",0, 1,"C");
-	$pdf->Cell(68,$altriga,'Questo programma e\' stato',0,1,"C");
-	$pdf->Cell(68,$altriga,'realizzato anche grazia a',0,1,"C");
-	$pdf->Cell(70, 2," ",0, 1, "C");
-	$pdf->SetFont('Asfont','',15);
-	$pdf->Cell(68,$altriga,'alternative studio',0,1,"C");
-	$pdf->SetFont('Asfont','',11);
-	$pdf->Cell(70, 2," ",0, 1, "C");
-	$pdf->Cell(68,$altriga,'Promotion for an Alternative Evolution',0,1,"C");
-	$pdf->Cell(70, 2," ",0, 1, "C");
-	$pdf->SetFont('Asfont','',13);
-	$pdf->Cell(68,$altriga,'www.alternativestudio.it',0,1,"C");*/
+
 }
