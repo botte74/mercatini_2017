@@ -153,7 +153,7 @@
 		$pdf->SetLineWidth(1);
 		$pdf->setxy(10,$y);
 		$pdf->SetFont('Arial','B',14);
-		$pdf->Cell(190,10,'Sagra Mandria 2017',0,1,"C");
+		$pdf->Cell(190,10,'Mercatini Natale 2017',0,1,"C");
 		$y += 10;
 
 		// stampo testatina

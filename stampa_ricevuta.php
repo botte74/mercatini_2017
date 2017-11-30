@@ -213,7 +213,7 @@
 
 		$pdf->setxy(5,5);
 		$pdf->SetFont('Arial','B',12);
-		$pdf->Cell(70,$altriga,'Sagra Mandria 2017',0,1,"C");
+		$pdf->Cell(70,$altriga,'Mercatini Natale 2017',0,1,"C");
 		$pdf->Cell(70,$altriga, iconv('UTF-8', 'windows-1252', "Ordine n° " . $ordine), 0, 1, "R");
 		$pdf->Cell(70,$altriga, iconv('UTF-8', 'windows-1252', $nome), "B", 1, "L");
 		$pdf->Cell(70,2,"",0,1);
@@ -288,7 +288,7 @@ function stampa_buono_testa() {
 
 	$pdf->setxy(5,5);
 	$pdf->SetFont('Arial','B',12);
-	$pdf->Cell(70,6,'Sagra Mandria 2017',0,1,"C");
+	$pdf->Cell(70,6,'Mercatini Natale 2017',0,1,"C");
 	$pdf->Cell(70,6, iconv('UTF-8', 'windows-1252', "Ordine n° " . $ordine), 0, 1, "R");
 	$pdf->Cell(70,6, iconv('UTF-8', 'windows-1252', $nome), 0, 1, "L");
 	$pdf->Cell(70,2,"",0,1);

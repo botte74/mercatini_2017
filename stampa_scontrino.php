@@ -102,7 +102,7 @@
 		global $pdf, $totaleordine, $row, $altriga, $nome, $ordine;
 		$pdf->setxy(4,5);
 		$pdf->SetFont('Arial','B',12);
-		$pdf->Cell(68,$altriga,'Sagra Mandria 2017',0,1,"C");
+		$pdf->Cell(68,$altriga,'Mercatini Natale 2017',0,1,"C");
 		$pdf->Cell(68,$altriga, iconv('UTF-8', 'windows-1252', "Ordine n° " . $ordine), "B", 1, "R");
 	}
 

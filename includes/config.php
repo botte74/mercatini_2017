@@ -14,7 +14,7 @@ ob_start('mb_output_handler');
 // apro connessione al DB
 $db_host = 'localhost';
 $db_user = 'root';
-$db_pass = 'root';
+$db_pass = 'admin';
 $db_name = 'parrocchia_mercatini';
 $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
